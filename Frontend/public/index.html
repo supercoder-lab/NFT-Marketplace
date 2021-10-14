@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vulnerary</title>
+
+    <base href="http://localhost:3000/vulnerary/">
+    <!-- <base href="https://espsofttech.tech/vulnerary/">   -->
+    
+    <!-- <base href="http://82.223.120.93/"> -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/stylesheet2.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+  <!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+  <!--===============================================================================================-->  
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+  <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/videoreact.css">
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- <script src="js/jquery.bcSwipe.js"></script> -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>   
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+  <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+    <script src="js/jquery.viewportchecker.min.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/global.js"></script>
+    
+    
+    <script type="text/javascript"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0G2643V20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G0G2643V20');
+</script>
+    <script type="text/javascript">
+       
+      $(".toggle-password").click(function() {
+        
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+          input.attr("type", "text");
+        } else {
+          input.attr("type", "password");
+        }
+      });
+    </script>
+
+<script>
+  $(document).ready(function(){
+      $('body').delegate(".user-dropprofile","click", function(){
+          $(this).find(".drop-down-list").slideToggle("fast");
+      });
+  });
+  $('body').delegate(document,"click", function(event){
+      var $trigger = $(".user-dropprofile");
+      if($trigger !== event.target && !$trigger.has(event.target).length){
+          $(".drop-down-list").slideUp("fast");
+      }            
+  });
+</script>
+<!-- <script>
+  $(document).ready(function(){
+    $(".search_ul").hover(function(){
+      alert('hello');
+      $("page-login").hide();
+    });
+  
+  });
+  </script> -->
+    
+  <script>  
+  // 	$('body').delegate(".cmn-toggle-switch","click", function(){
+	// 	if ($(this).hasClass("active")){
+	// 		$(this).removeClass("active");
+	// 		$('body').removeClass('menu-open')
+	// 	} else{
+	// 		$(this).addClass("active");
+	// 		$('body').addClass('menu-open')
+	// 	}
+	// 	$(".header-menu").stop().slideToggle();
+	// 	$(".large-popup").slideUp();
+	// 	return false;
+	// }); 
+    </script>  
+
+
+ <script>  
+  $('body').delegate('#myCarousel','swiperight',function() {  
+        $("#myCarousel").carousel('prev');
+          console.clear();  
+        setTimeout(function(){
+          console.clear();
+        },100)
+      });  
+  $('body').delegate('#myCarousel','swipeleft',function() { 
+        $("#myCarousel").carousel('next');
+          console.clear();  
+        setTimeout(function(){
+          console.clear();
+        },100)
+     }); 
+  </script> 
+
+
+<script>
+  $(document).ready(function () {
+    $('.carousel').on('touchstart', function(event){
+    const xClick = event.originalEvent.touches[0].pageX;
+    $(this).one('touchmove', function(event){
+        const xMove = event.originalEvent.touches[0].pageX;
+        const sensitivityInPx = 5;
+
+        if( Math.floor(xClick - xMove) > sensitivityInPx ){
+            $(this).carousel('next');
+        }
+        else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+            $(this).carousel('prev');
+        }
+    });
+    $(this).on('touchend', function(){
+        $(this).off('touchmove');
+    });
+});
+});
+</script>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+<script>
+
+  var ethereum = window.ethereum;
+  ethereum.on('accountsChanged', function (accounts) {
+    window.location.reload()
+  });
+  ethereum.on('accountsChanged', function (accounts) {
+    window.location.reload()
+  });
+  
+  ethereum.on('close',function (accounts) {
+    window.location.reload()
+  });
+  </script>

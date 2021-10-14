@@ -1,0 +1,15 @@
+var db = require('../utils/connection');
+
+module.exports = {
+
+    getItemDetails : "Select i.id as item_id, u.full_name as owner,uw.public as creator, i.end_date,i.datetime,i.quantity,coalesce(getSoldEdition(i.id),0) as editionCount,getEditionCount(i.id) as TotalEdition,i.file_type, i.item_category_id, i.name,i.description, i.image, i.price, i.created_by,i.edition_type,ie.id as item_edition_id,i.expiry_date,ie.id as id,u.user_name,i.token_hash from item_edition as ie left join item as i on i.id=ie.item_id LEFT JOIN users as u ON i.created_by=u.id left join user_wallet as uw on uw.user_id =i.created_by where ie.id =?  and (date(i.expiry_date) >= CURRENT_DATE or i.expiry_date is null)",
+    getSetting : "select * from settings where id=1",
+    getitemwallet : "Select user_id,public from user_wallet where public=?",
+    getWalletDetail : `select uw.user_id,uw.public,0 as balance from user_wallet as uw where uw.user_id=getUserIdByAddress(?) `,
+    getItemCount : 'select getNFTCount(?) as nftcount,image,name from item where owner_id=?',
+    getUserItem : " Select i.id,ie.id as item_edition_id, case when length(i.name)>=30 then concat(left(i.name,30),'...')  else i.name end as name,i.name as item_fullname,i.description,i.image,i.file_type,i.owner,ie.owner_id,i.created_by,i.item_category_id,i.token_id,ie.price,coalesce(i.start_date,i.datetime) as start_date,i.end_date,ie.edition_text,ie.edition_no from item_edition as ie left join item as i on i.id=ie.item_id where ie.id in (select min(id) from item_edition where is_sold=0 group by item_id)  and (date(i.expiry_date) >= CURRENT_DATE or i.expiry_date is null) and ie.owner_id=getUserIdByAddress(?)",
+    getUserHolder: "SELECT it.id as edition_id,concat('...',right(coalesce(it.transfer_hash,i.token_hash),10)) as transfer_hash,coalesce(it.transfer_hash,i.token_hash) as full_transfer_hash,it.datetime,uw.user_id,uw.coin_id,uw.public,s.resale_charges,tr.amount,tr.currency FROM `item_edition` as it LEFT JOIN  item  as i ON i.id =it.item_id LEFT JOIN user_wallet as uw ON uw.user_id=it.owner_id LEFT JOIN transaction as tr ON tr.item_edition_id=it.id and tr.transaction_type_id=6 cross join settings as s where it.id=? order by tr.id desc",
+    getUserItemDetails : "Select *,getNFTIdByItemId(id) as item_edition_id,getEditionCount(id)-getSoldEdition(id) as nft_balance from item where owner_id=?",
+    getCreatorItem :" Select *,getNFTIdByItemId(id) as item_edition_id,getEditionCount(id)-getSoldEdition(id) as nft_balance from item where created_by=?",
+    getuserhashdetail : "select get_duration(datetime) as duration,getAddressByUserId(created_by) as fromuser,getAddressByUserId(owner_id) as touser from item where token_hash=?     union all     select get_duration(ie.datetime) as duration,getAddressByUserId(i.created_by) as fromuser,getAddressByUserId(owner_id) as touser from item_edition as ie left join item as i on i.id=ie.item_id where ie.transfer_hash=?"
+}

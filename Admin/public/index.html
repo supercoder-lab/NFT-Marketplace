@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <base href="http://localhost:3000/vulnerary-admin/">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <!-- jquery-steps css -->
+  
+	<!-- vector map CSS -->
+	<link href="./vendors/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="./vendors/bower_components/jquery.steps/demo/css/jquery.steps.css">
+    <!--alerts CSS -->
+  <link href="./vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet" type="text/css">
+  	<!-- Custom Fonts -->
+    <link href="./dist/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Calendar CSS -->
+	<link href="./vendors/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet" type="text/css"/>
+  <link href="./vendors/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet"
+    type="text/css" />
+
+  <!-- Custom CSS -->
+  <link href="./vendors/bower_components/morris.js/morris.css" rel="stylesheet" type="text/css" />
+
+  <!-- Data table CSS -->
+  <link href="./vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet"
+    type="text/css" />
+<!-- bootstrap-touchspin CSS -->
+<link href="./vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" type="text/css"/>
+  <link href="./vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+  <link href="./vendors/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/><link href="vendors/bower_components/morris.js/morris.css" rel="stylesheet"/><link href="vendors/bower_components/switchery/dist/switchery.min.css" rel="stylesheet"/>
+  <link href="./vendors/bower_components/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet"/>
+  <link href="./vendors/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet"/>
+  <link href="./vendors/bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet"/>
+
+  <!-- bootstrap-select CSS -->
+  <link href="./vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet"
+    type="text/css" />
+
+  <!-- Bootstrap Switches CSS -->
+  <link href="./vendors/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet"
+    type="text/css" />
+  <!-- switchery CSS -->
+  <link href="./vendors/bower_components/switchery/dist/switchery.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Custom CSS -->
+  <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+  <title>Vulnerary-Admin</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
+  <script src="./vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendors/bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+<!-- Form Wizard JavaScript -->
+<script src="vendors/bower_components/jquery.steps/build/jquery.steps.min.js"></script>
+  <!-- Data table JavaScript -->
+  <script src="vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<!-- Bootstrap Touchspin JavaScript -->
+
+<script src="dist/js/productorders-data.js"></script>
+<script src="vendors/bower_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Starrr JavaScript -->
+<script src="dist/js/starrr.js"></script>  
+	<!-- Product Detail Data JavaScript -->
+	<script src="dist/js/product-detail-data.js"></script>
+<script src="dist/js/jquery.slimscroll.js"></script>
+
+  <!-- simpleWeather JavaScript -->
+  <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+  <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+  <script src="dist/js/simpleweather-data.js"></script>
+
+  <!-- Progressbar Animation JavaScript -->
+  <script src="vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+
+  <!-- Fancy Dropdown JS -->
+  <script src="dist/js/dropdown-bootstrap-extended.js"></script>
+
+  <!-- Sparkline JavaScript -->
+  <script src="vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+
+  <!-- Owl JavaScript -->
+  <script src="vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- Sweet-Alert  -->
+<!-- Product Checkout Data JavaScript -->
+<script src="dist/js/product-checkout-data.js"></script>
+<!-- Product Checkout Data JavaScript -->
+<script src="dist/js/product-cart-data.js"></script>
+<script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="dist/js/sweetalert-data.js"></script>
+  <!-- ChartJS JavaScript -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+
+  <!-- EasyPieChart JavaScript -->
+  <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+  <!-- Morris Charts JavaScript -->
+  <script src="vendors/bower_components/raphael/raphael.min.js"></script>
+  <script src="vendors/bower_components/morris.js/morris.min.js"></script>
+  <script src="vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+  <!-- Switchery JavaScript -->
+  <script src="vendors/bower_components/switchery/dist/switchery.min.js"></script>
+  <!-- Bootstrap Select JavaScript -->
+  <script src="vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <!-- Init JavaScript -->
+  <script src="dist/js/init.js"></script>
+  <script src="dist/js/dashboard-data.js"></script>
+  <script src="dist/js/ecommerce-data.js"></script>
+  
+  <script>
+    $('#toggle_nav_btn').click(function() {
+      alert('toggle');
+    $('.slide-nav-toggle').addClass('active');
+    $('#content').toggle();
+}), function() { 
+    $(this).removeClass('active');
+};
+  </script>
+
+  <script>
+    $('body').delegate('#mobileMenuBtn','click',function(){
+      $('.fixed-sidebar-left').toggleClass('mobileLeftShow');
+    });
+  </script>
+
+</body>
+
+</html>
